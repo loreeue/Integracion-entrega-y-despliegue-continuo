@@ -1,4 +1,82 @@
-# AIS-Practicas-4y5-2024
+# Integración, Entrega y Despliegue Continuo - Nuevas Funcionalidades
+
+Este proyecto forma parte de la asignatura **Ampliación de Ingeniería del Software** del Grado en Ingeniería Informática. Integra la automatización de workflows para pruebas, publicación y despliegue de la aplicación **Nitflex**, junto con el desarrollo de nuevas funcionalidades utilizando **GitHub Flow**.
+
+---
+
+## Práctica 4: Definición de Workflows
+
+### Objetivo
+
+Configurar workflows que automaticen la integración, pruebas, publicación de versiones y despliegue de la aplicación. Estos workflows se ejecutarán automáticamente en función de las acciones realizadas en el repositorio.
+
+### Workflows Configurados
+
+1. **Workflow 1: Commits en ramas distintas de `main`**
+   - Ejecución de pruebas unitarias y de integración.
+
+2. **Workflow 2: Pull Requests hacia `main`**
+   - Ejecución de pruebas unitarias, de integración y de sistema antes de la integración.
+
+3. **Workflow 3: Integración en producción (`main`)**
+   - Publicación de una imagen Docker en Docker Hub.
+   - Despliegue de la aplicación en Azure.
+   - Ejecución de un smoke test para verificar el despliegue.
+
+4. **Workflow 4: Ejecución nocturna**
+   - Pruebas de sistema en múltiples navegadores y sistemas operativos:
+     - Chrome/Firefox (Linux/Windows/MacOS).
+     - Edge (Windows).
+     - Safari (MacOS).
+
+---
+
+## Práctica 5: Desarrollo de Nuevas Funcionalidades con GitHub Flow
+
+### Objetivo
+
+Simular el desarrollo y mantenimiento de la aplicación utilizando **GitHub Flow**, con integración continua mediante los workflows de la práctica 4.
+
+### Funcionalidades y Fix Implementados
+
+1. **Nueva Funcionalidad:** Validación de años al crear películas.
+   - Años no válidos (anteriores a 1895) no deben ser aceptados.
+   - Implementación de un test unitario y uno de sistema para verificar el comportamiento.
+
+2. **Fix:** Corregir el botón "Cancel" en la página de edición.
+   - El botón debe permitir volver correctamente a la página principal.
+   - Se incluye un test de regresión para comprobar la funcionalidad.
+
+---
+
+## Metodología y Flujo de Trabajo
+
+1. **Creación de ramas:**
+   - Cada tarea (fix o nueva funcionalidad) tiene su propia rama (`fix-cancel-button`, `feature-invalid-year`).
+2. **Desarrollo en paralelo:**
+   - Cada desarrollador trabaja en su rama de forma independiente.
+3. **Pull Requests:**
+   - Primero se integra el fix del botón "Cancel".
+   - Luego, la nueva funcionalidad del año no válido.
+4. **Validación de cambios:**
+   - Los workflows ejecutan pruebas unitarias, integración y sistema automáticamente.
+   - Publicación de imágenes Docker y despliegue en Azure tras la integración.
+
+---
+
+## Cómo Ejecutarlo
+
+1. **Probar localmente:**
+   - Crear y trabajar en las ramas necesarias.
+   - Verificar la configuración y ejecución de los workflows antes de subir cambios.
+
+2. **Ejecutar workflows:**
+   - Subir los cambios al repositorio en GitHub.
+   - Verificar que los workflows se ejecuten correctamente para cada acción.
+
+---
+
+## Entrega
 
 Autor(es): Javier Romero García y Loreto Uzquiano Esteban.
 
